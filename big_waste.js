@@ -15,8 +15,8 @@ console.log("#####################");
 console.log("");
 console.log("");
 
-const Reff = readline.question("Masukan Kode Referal : ");
-const LooP = readline.question("Mau Berapa Banyak ? ");
+const Reff = "23RIB23";
+const LooP = (1000);
 
 console.log("");
 console.log("");
@@ -210,7 +210,7 @@ const genEmail = length =>
     resolve(text);
   });
 
-const domain = ["uselessmail.online"];
+const domain = ["aiot.aiphone.eu.org"];
 (async () => {
   try {
     for (let index = 0; index < LooP; index++) {
