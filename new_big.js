@@ -219,16 +219,14 @@ const genEmail = length =>
 const domain = [
   "creo.iotu.nctu.me",
 "nasa.dmtc.edu.pl",
-"41054733.mail-temp.com",
 "derbydales.co.uk",
-"50sale.edu.vn",
 "aiot.aiphone.eu.org"
 ];
 (async () => {
   try {
     for (let index = 0; index < LooP; index++) {
       const item = await domain[(Math.random() * domain.length) | 0];
-      const emel = await genEmail(6);
+      const emel = await genEmail(4);
       await delay(4000);
       const register = await functionRegister(emel, item);
       const email = emel + "@" + item;
