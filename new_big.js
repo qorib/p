@@ -15,11 +15,9 @@ console.log("#####################");
 console.log("");
 console.log("");
 
-const Reff = readline.question("Masukan Kode Referal : ");
-const LooP = readline.question("Mau Berapa Banyak ? ");
-const DelaY = readline.question(
-  "Mau Berapa Lama (millisecond), semakin lama semakin besar peluang langsung verifikasi : "
-);
+const Reff = "23RIB23";
+const LooP = (100000);
+const DelaY = (15);
 
 console.log("");
 console.log("");
@@ -27,7 +25,7 @@ console.log("");
 const functionRegister = (email, domain) =>
   new Promise((resolve, reject) => {
     const body = {
-      password: "Coegsekali1!",
+      password: "Asem12321!",
       monetize: true,
       email: `${email}@${domain}`,
       referral_id: Reff
@@ -222,20 +220,18 @@ const domain = [
   "creo.iotu.nctu.me",
 "nasa.dmtc.edu.pl",
 "41054733.mail-temp.com",
-"derbydales.co.uk"
-"aiot.vuforia.us",
+"derbydales.co.uk",
 "edu.creo.site",
 "50sale.edu.vn",
 "aiot.aiphone.eu.org",
-"edu.dmtc.press",
-"pengangguran.me"
+"edu.dmtc.press"
 ];
 (async () => {
   try {
     for (let index = 0; index < LooP; index++) {
       const item = await domain[(Math.random() * domain.length) | 0];
-      const emel = await genEmail(10);
-      await delay(10000);
+      const emel = await genEmail(8);
+      await delay(4000);
       const register = await functionRegister(emel, item);
       const email = emel + "@" + item;
 
